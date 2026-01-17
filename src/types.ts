@@ -74,6 +74,10 @@ export interface SpamAnalysisResult {
     // Classification
     classification: "ham" | "spam" | "probable_spam" | "probable_ham";
 
+    // Language detection
+    languageDetected: string;
+    languageConfidence: number;
+
     // Detailed results
     analyzers: AnalyzerResult[];
 
@@ -88,6 +92,8 @@ export interface SpamAnalysisResult {
         extractedUrls?: string[];
         extractedEmails?: string[];
         languageDetected?: string;
+        languageConfidence?: number;
+        languageIsSupported?: boolean;
         textStats?: TextStats;
     };
 }

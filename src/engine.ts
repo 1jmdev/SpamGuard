@@ -1,6 +1,6 @@
 // ============================================================================
 // SpamGuard Engine
-// Main spam detection orchestrator
+// Main spam detection orchestrator with multilingual support
 // ============================================================================
 
 import type {
@@ -24,6 +24,9 @@ import {
     calculateTextStats,
     extractTextFromHtml,
 } from "./utils/text";
+import { detectEmailLanguage } from "./utils/language";
+import { getLanguageData, hasLanguageData } from "./data/languages";
+import type { LanguageDataset } from "./data/languages/schema";
 
 export class SpamGuard {
     private config: SpamGuardConfig;
@@ -41,14 +44,42 @@ export class SpamGuard {
         // Parse the email
         const email = parseEmail(input);
 
+        // Detect language from subject and body
+        const textBody = email.textBody || "";
+        const htmlText = email.htmlBody
+            ? extractTextFromHtml(email.htmlBody)
+            : "";
+        const bodyText = textBody.length > htmlText.length ? textBody : htmlText;
+
+        const languageResult = detectEmailLanguage(email.subject, bodyText);
+
+        // Load language-specific dataset
+        const languageData = getLanguageData(languageResult.code);
+
+        // Options for language-aware analyzers
+        const langOptions = {
+            languageCode: languageResult.code,
+            languageData,
+        };
+
         // Run all analyzers
+        // Language-agnostic analyzers
+        const headerResult = analyzeHeaders(email);
+        const urlResult = analyzeUrls(email);
+        const htmlResult = analyzeHtml(email);
+
+        // Language-aware analyzers
+        const contentResult = analyzeContent(email, langOptions);
+        const patternResult = analyzePatterns(email, langOptions);
+        const bayesianResult = analyzeBayesian(email, langOptions);
+
         const analyzers: AnalyzerResult[] = [
-            analyzeHeaders(email),
-            analyzeContent(email),
-            analyzeUrls(email),
-            analyzeHtml(email),
-            analyzePatterns(email),
-            analyzeBayesian(email),
+            headerResult,
+            contentResult,
+            urlResult,
+            htmlResult,
+            patternResult,
+            bayesianResult,
         ];
 
         // Calculate total score
@@ -56,11 +87,11 @@ export class SpamGuard {
 
         // Calculate confidence based on how many analyzers contributed
         const contributingAnalyzers = analyzers.filter(
-            (a) => a.matches.length > 0,
+            (a) => a.matches.length > 0
         ).length;
         const confidence = Math.min(
             contributingAnalyzers / analyzers.length + 0.2,
-            1,
+            1
         );
 
         // Determine classification
@@ -87,7 +118,7 @@ export class SpamGuard {
             .slice(0, 5)
             .map(
                 (m) =>
-                    `${m.rule.name}: ${m.rule.description}${m.details ? ` (${m.details})` : ""}`,
+                    `${m.rule.name}: ${m.rule.description}${m.details ? ` (${m.details})` : ""}`
             );
 
         const processingTimeMs = performance.now() - startTime;
@@ -99,6 +130,8 @@ export class SpamGuard {
             threshold: this.config.spamThreshold,
             confidence: Math.round(confidence * 100) / 100,
             classification,
+            languageDetected: languageResult.code,
+            languageConfidence: Math.round(languageResult.confidence * 100) / 100,
             analyzers,
             topReasons,
             processingTimeMs: Math.round(processingTimeMs * 100) / 100,
@@ -106,15 +139,14 @@ export class SpamGuard {
 
         // Add debug info if enabled
         if (this.config.enableDebug) {
-            const textBody = email.textBody || "";
-            const htmlText = email.htmlBody
-                ? extractTextFromHtml(email.htmlBody)
-                : "";
             const allText = `${email.subject} ${textBody} ${htmlText}`;
 
             result.debug = {
                 extractedUrls: extractUrls(allText),
                 extractedEmails: extractEmails(allText),
+                languageDetected: languageResult.code,
+                languageConfidence: languageResult.confidence,
+                languageIsSupported: languageResult.isSupported,
                 textStats: calculateTextStats(allText),
             };
         }
@@ -157,7 +189,7 @@ export const spamGuard = new SpamGuard();
 // Export analyze function for convenience
 export function analyzeEmail(
     input: EmailInput,
-    config?: Partial<SpamGuardConfig>,
+    config?: Partial<SpamGuardConfig>
 ): SpamAnalysisResult {
     const guard = config ? new SpamGuard(config) : spamGuard;
     return guard.analyze(input);

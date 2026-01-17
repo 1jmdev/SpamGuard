@@ -1,6 +1,7 @@
 // ============================================================================
 // Content Analyzer
 // Analyzes email body content for spam indicators
+// Supports multilingual spam detection
 // ============================================================================
 
 import type {
@@ -9,12 +10,8 @@ import type {
     AnalysisRule,
     ParsedEmail,
 } from "../types";
-import {
-    SPAM_WORDS,
-    SPAM_SINGLE_WORDS,
-    SPAM_SUBJECT_PATTERNS,
-    HAM_WORDS,
-} from "../data/spam-words";
+import type { LanguageDataset, SpamWord } from "../data/languages/schema";
+import { getLanguageData } from "../data/languages";
 import {
     calculateTextStats,
     normalizeText,
@@ -96,9 +93,34 @@ const CONTENT_RULES: AnalysisRule[] = [
     },
 ];
 
-export function analyzeContent(email: ParsedEmail): AnalyzerResult {
+/**
+ * Options for content analysis
+ */
+export interface ContentAnalyzerOptions {
+    /** Language code for spam detection (default: "en") */
+    languageCode?: string;
+    /** Pre-loaded language dataset (takes precedence over languageCode) */
+    languageData?: LanguageDataset;
+}
+
+/**
+ * Analyze email content for spam indicators
+ *
+ * @param email - Parsed email to analyze
+ * @param options - Analysis options including language settings
+ * @returns Analysis result with score and matched rules
+ */
+export function analyzeContent(
+    email: ParsedEmail,
+    options: ContentAnalyzerOptions = {}
+): AnalyzerResult {
     const matches: RuleMatch[] = [];
     let totalScore = 0;
+
+    // Get language dataset
+    const langData =
+        options.languageData ||
+        getLanguageData(options.languageCode || "en");
 
     // Get text content
     const textBody = email.textBody || "";
@@ -150,33 +172,38 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
 
         if (letters.length > 5 && upperLetters.length / letters.length > 0.8) {
             const rule = CONTENT_RULES.find(
-                (r) => r.name === "SUBJECT_ALL_CAPS",
+                (r) => r.name === "SUBJECT_ALL_CAPS"
             )!;
             matches.push({ rule, matched: true, details: email.subject });
             totalScore += rule.score;
         }
     }
 
-    // Check subject spam patterns
-    for (const pattern of SPAM_SUBJECT_PATTERNS) {
-        if (pattern.pattern.test(email.subject)) {
-            matches.push({
-                rule: {
-                    name: `SUBJECT_PATTERN_${pattern.name}`,
-                    description: `Subject matches spam pattern: ${pattern.name}`,
-                    score: pattern.score,
-                    category: "content",
-                },
-                matched: true,
-                details: email.subject,
-            });
-            totalScore += pattern.score;
+    // Check subject spam patterns using language-specific patterns
+    for (const pattern of langData.spamSubjectPatterns) {
+        try {
+            const regex = new RegExp(pattern.pattern, "i");
+            if (regex.test(email.subject)) {
+                matches.push({
+                    rule: {
+                        name: `SUBJECT_PATTERN_${pattern.name}`,
+                        description: `Subject matches spam pattern: ${pattern.name}`,
+                        score: pattern.score,
+                        category: "content",
+                    },
+                    matched: true,
+                    details: email.subject,
+                });
+                totalScore += pattern.score;
+            }
+        } catch {
+            // Skip invalid regex patterns
         }
     }
 
-    // Check spam phrases
+    // Check spam phrases using language-specific data
     const matchedPhrases: string[] = [];
-    for (const spamWord of SPAM_WORDS) {
+    for (const spamWord of langData.spamWords) {
         const searchTerm = spamWord.caseSensitive
             ? spamWord.word
             : spamWord.word.toLowerCase();
@@ -199,13 +226,13 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
         }
     }
 
-    // Check single spam words
+    // Check single spam words using language-specific data
     const words = normalizedAll.split(/\s+/);
     const matchedWords: string[] = [];
 
     for (const word of words) {
-        const score = SPAM_SINGLE_WORDS.get(word);
-        if (score && !matchedWords.includes(word)) {
+        const score = langData.spamSingleWords[word];
+        if (score !== undefined && !matchedWords.includes(word)) {
             matchedWords.push(word);
             matches.push({
                 rule: {
@@ -221,8 +248,8 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
         }
     }
 
-    // Check ham words (reduce score)
-    for (const [hamWord, adjustment] of HAM_WORDS) {
+    // Check ham words using language-specific data (reduce score)
+    for (const [hamWord, adjustment] of Object.entries(langData.hamWords)) {
         if (normalizedAll.includes(hamWord)) {
             matches.push({
                 rule: {
@@ -255,7 +282,7 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
     // High special char ratio
     if (stats.specialCharRatio > 0.15) {
         const rule = CONTENT_RULES.find(
-            (r) => r.name === "HIGH_SPECIAL_CHAR_RATIO",
+            (r) => r.name === "HIGH_SPECIAL_CHAR_RATIO"
         )!;
         matches.push({
             rule,
@@ -269,7 +296,7 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
     const exclamationCount = (allText.match(/!/g) || []).length;
     if (exclamationCount > 5) {
         const rule = CONTENT_RULES.find(
-            (r) => r.name === "MULTIPLE_EXCLAMATIONS",
+            (r) => r.name === "MULTIPLE_EXCLAMATIONS"
         )!;
         matches.push({
             rule,
@@ -285,7 +312,7 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
     const moneyMatches = allText.match(moneyPattern) || [];
     if (moneyMatches.length > 3) {
         const rule = CONTENT_RULES.find(
-            (r) => r.name === "EXCESSIVE_MONEY_REFS",
+            (r) => r.name === "EXCESSIVE_MONEY_REFS"
         )!;
         matches.push({
             rule,
@@ -302,6 +329,8 @@ export function analyzeContent(email: ParsedEmail): AnalyzerResult {
         maxScore: 30, // Approximate max based on possible matches
         matches,
         metadata: {
+            language: langData.language,
+            languageName: langData.languageName,
             wordCount: stats.wordCount,
             capsRatio: stats.uppercaseRatio,
             matchedPhrases: matchedPhrases.length,

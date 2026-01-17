@@ -5,9 +5,11 @@
         "dev": "wrangler dev",
         "deploy": "wrangler deploy",
         "test": "bun test",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "translate": "bun run scripts/translate.ts"
     },
     "dependencies": {
+        "franc": "^6.2.0",
         "hono": "^4.11.3"
     },
     "devDependencies": {

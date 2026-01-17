@@ -1,18 +1,117 @@
 // ============================================================================
 // Bayesian Analyzer
 // Statistical spam classification using token probabilities
+// Supports multilingual analysis
 // ============================================================================
 
 import type { AnalyzerResult, RuleMatch, ParsedEmail } from "../types";
-import {
-    BAYESIAN_TOKENS,
-    calculateRobinsonFisher,
-    tokenize,
-} from "../data/bayesian-tokens";
+import type { LanguageDataset, TokenProbability } from "../data/languages/schema";
+import { getLanguageData } from "../data/languages";
 import { extractTextFromHtml } from "../utils/text";
 
-export function analyzeBayesian(email: ParsedEmail): AnalyzerResult {
+/**
+ * Options for Bayesian analysis
+ */
+export interface BayesianAnalyzerOptions {
+    /** Language code for token probabilities (default: "en") */
+    languageCode?: string;
+    /** Pre-loaded language dataset (takes precedence over languageCode) */
+    languageData?: LanguageDataset;
+}
+
+/**
+ * Tokenize text for Bayesian analysis
+ * Language-agnostic tokenization that works for multiple scripts
+ */
+export function tokenize(text: string): string[] {
+    // Simple tokenization - split on non-alphanumeric
+    // Extended to support more Unicode ranges for multilingual
+    const tokens = text
+        .toLowerCase()
+        // Keep letters (including accented), numbers, and common punctuation that might be part of words
+        .replace(/[^\p{L}\p{N}\s'-]/gu, " ")
+        .split(/\s+/)
+        .filter((t) => t.length >= 3 && t.length <= 20);
+
+    // Deduplicate while preserving some frequency info
+    const tokenCounts = new Map<string, number>();
+    for (const token of tokens) {
+        tokenCounts.set(token, (tokenCounts.get(token) || 0) + 1);
+    }
+
+    // Return unique tokens, but include repeated important ones
+    const result: string[] = [];
+    for (const [token, count] of tokenCounts) {
+        // Add token once, or twice if it appears many times
+        result.push(token);
+        if (count >= 3) {
+            result.push(token);
+        }
+    }
+
+    return result;
+}
+
+/**
+ * Calculate spam probability using Robinson-Fisher method
+ */
+export function calculateRobinsonFisher(
+    tokens: string[],
+    bayesianTokens: Record<string, TokenProbability>
+): number {
+    const probabilities: number[] = [];
+
+    for (const token of tokens) {
+        const lowerToken = token.toLowerCase();
+        const tokenData = bayesianTokens[lowerToken];
+
+        if (tokenData) {
+            // Calculate spam probability for this token
+            // P(spam|token) = P(token|spam) * P(spam) / P(token)
+            // Simplified using equal priors: P(spam|token) = P(token|spam) / (P(token|spam) + P(token|ham))
+            const pSpam = tokenData.spam / (tokenData.spam + tokenData.ham);
+            probabilities.push(pSpam);
+        }
+    }
+
+    if (probabilities.length === 0) {
+        return 0.5; // Neutral
+    }
+
+    // Use the 15 most significant probabilities (furthest from 0.5)
+    const significant = probabilities
+        .map((p) => ({ p, distance: Math.abs(p - 0.5) }))
+        .sort((a, b) => b.distance - a.distance)
+        .slice(0, 15)
+        .map((x) => x.p);
+
+    const productSpam = significant.reduce((acc, p) => acc * p, 1);
+    const productHam = significant.reduce((acc, p) => acc * (1 - p), 1);
+
+    if (productSpam === 0 && productHam === 0) return 0.5; // Avoid 0/0
+
+    const result = productSpam / (productSpam + productHam);
+
+    return Math.max(0, Math.min(1, result));
+}
+
+/**
+ * Analyze email using Bayesian classification
+ *
+ * @param email - Parsed email to analyze
+ * @param options - Analysis options including language settings
+ * @returns Analysis result with spam probability and matched tokens
+ */
+export function analyzeBayesian(
+    email: ParsedEmail,
+    options: BayesianAnalyzerOptions = {}
+): AnalyzerResult {
     const matches: RuleMatch[] = [];
+
+    // Get language dataset
+    const langData =
+        options.languageData ||
+        getLanguageData(options.languageCode || "en");
 
     // Get all text content
     const textBody = email.textBody || "";
@@ -29,6 +128,7 @@ export function analyzeBayesian(email: ParsedEmail): AnalyzerResult {
             maxScore: 5,
             matches: [],
             metadata: {
+                language: langData.language,
                 spamProbability: 0.5,
                 tokenCount: 0,
                 knownTokens: 0,
@@ -36,13 +136,14 @@ export function analyzeBayesian(email: ParsedEmail): AnalyzerResult {
         };
     }
 
-    // Find tokens with known probabilities
+    // Find tokens with known probabilities using language-specific data
+    const bayesianTokens = langData.bayesianTokens;
     const knownTokens: Array<{ token: string; spamProb: number }> = [];
     const spamTokens: string[] = [];
     const hamTokens: string[] = [];
 
     for (const token of tokens) {
-        const data = BAYESIAN_TOKENS.get(token);
+        const data = bayesianTokens[token];
         if (data) {
             const spamProb = data.spam / (data.spam + data.ham);
             knownTokens.push({ token, spamProb });
@@ -56,7 +157,7 @@ export function analyzeBayesian(email: ParsedEmail): AnalyzerResult {
     }
 
     // Calculate overall spam probability
-    const spamProbability = calculateRobinsonFisher(tokens);
+    const spamProbability = calculateRobinsonFisher(tokens, bayesianTokens);
 
     // Convert probability to score (0-5 range)
     // Probability > 0.5 = spam indicator
@@ -145,6 +246,7 @@ export function analyzeBayesian(email: ParsedEmail): AnalyzerResult {
         maxScore: 5,
         matches,
         metadata: {
+            language: langData.language,
             spamProbability,
             tokenCount: tokens.length,
             knownTokens: knownTokens.length,

@@ -1,0 +1,1386 @@
+{
+    "language": "pl",
+    "languageName": "Polish",
+    "spamWords": [
+        {
+            "word": "nigeryjski książę",
+            "score": 3.5,
+            "category": "scam"
+        },
+        {
+            "word": "przelew bankowy",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "dane konta bankowego",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "fundusz spadkowy",
+            "score": 3,
+            "category": "scam"
+        },
+        {
+            "word": "nieodebrane środki",
+            "score": 3,
+            "category": "scam"
+        },
+        {
+            "word": "beneficjant",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "milion dolarów",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "milion dolarów",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "opłata za przelew",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "opłata za przetwarzanie",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "opłata zaliczkowa",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "western union",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "moneygram",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "portfel bitcoin",
+            "score": 1,
+            "category": "crypto"
+        },
+        {
+            "word": "inwestycja w kryptowalutę",
+            "score": 1.5,
+            "category": "crypto"
+        },
+        {
+            "word": "podwój swoje bitcoiny",
+            "score": 3,
+            "category": "crypto"
+        },
+        {
+            "word": "rozdawnictwo kryptowalut",
+            "score": 2.5,
+            "category": "crypto"
+        },
+        {
+            "word": "działaj teraz",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "działać natychmiast",
+            "score": 1.8,
+            "category": "urgency"
+        },
+        {
+            "word": "pilna odpowiedź",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "pilna uwaga",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "natychmiastowe działanie",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "ograniczony czas",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "wygasa dzisiaj",
+            "score": 1.2,
+            "category": "urgency"
+        },
+        {
+            "word": "ostatnia szansa",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "ostateczne zawiadomienie",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "odpowiedz natychmiast",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "w ciągu 24 godzin",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "w ciągu 48 godzin",
+            "score": 0.8,
+            "category": "urgency"
+        },
+        {
+            "word": "wrażliwy na czas",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "nie zwlekaj",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "gratulacje zwycięzco",
+            "score": 2.5,
+            "category": "lottery"
+        },
+        {
+            "word": "wygrałeś",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "zwycięzca loterii",
+            "score": 2.5,
+            "category": "lottery"
+        },
+        {
+            "word": "powiadomienie o nagrodzie",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "odbierz swoją nagrodę",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "powiadomienie o wygranej",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "szczęśliwy zwycięzca",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "wybrany zwycięzca",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "nagroda pieniężna",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "darmowa nagroda",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "loteria",
+            "score": 1,
+            "category": "lottery"
+        },
+        {
+            "word": "zweryfikuj swoje konto",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "potwierdź swoją tożsamość",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "zaktualizuj swoją płatność",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "zawieszone konto",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "konto zawieszone",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "niezwykła aktywność",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "podejrzana aktywność",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "nieautoryzowany dostęp",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "kliknij tutaj, aby zweryfikować",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "dane logowania",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "resetowanie hasła",
+            "score": 0.8,
+            "category": "phishing"
+        },
+        {
+            "word": "alert bezpieczeństwa",
+            "score": 1,
+            "category": "phishing"
+        },
+        {
+            "word": "twoje konto będzie",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "brak weryfikacji",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "reaktywować swój",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "wypisać się",
+            "score": 0.1,
+            "category": "marketing"
+        },
+        {
+            "word": "kliknij tutaj",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "kup teraz",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "zamów teraz",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "darmowa oferta",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "oferta specjalna",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "ekskluzywna oferta",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "bez ryzyka",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "bez zobowiązań",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "gwarancja zwrotu pieniędzy",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "gwarantowana satysfakcja",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "zadzwoń teraz",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "bezpłatny numer",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "100% za darmo",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "całkowicie za darmo",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "bezpłatnie",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "bez opłat",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "najniższa cena",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "najlepsza cena",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "rabat",
+            "score": 0.3,
+            "category": "marketing"
+        },
+        {
+            "word": "zaoszczędź dużo",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "oszczędzać pieniądze",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "podwoić swoje",
+            "score": 1.5,
+            "category": "marketing"
+        },
+        {
+            "word": "zwiększyć swoje",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "zarabiać pieniądze",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "zarabiać",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "dodatkowy dochód",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "praca z domu",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "bądź swoim własnym szefem",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "wolność finansowa",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "wzbogacić się",
+            "score": 1.5,
+            "category": "marketing"
+        },
+        {
+            "word": "dostać zapłatę",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "natychmiastowy dostęp",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "dołącz do milionów",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "viagra",
+            "score": 2.5,
+            "category": "drugs"
+        },
+        {
+            "word": "cialis",
+            "score": 2.5,
+            "category": "drugs"
+        },
+        {
+            "word": "apteka",
+            "score": 0.8,
+            "category": "drugs"
+        },
+        {
+            "word": "apteka internetowa",
+            "score": 1.5,
+            "category": "drugs"
+        },
+        {
+            "word": "kanadyjska apteka",
+            "score": 1.8,
+            "category": "drugs"
+        },
+        {
+            "word": "recepta",
+            "score": 0.5,
+            "category": "drugs"
+        },
+        {
+            "word": "bez recepty",
+            "score": 2,
+            "category": "drugs"
+        },
+        {
+            "word": "bez recepty",
+            "score": 2,
+            "category": "drugs"
+        },
+        {
+            "word": "zaburzenie erekcji",
+            "score": 1.5,
+            "category": "drugs"
+        },
+        {
+            "word": "utrata wagi",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "schudnąć",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "schudnąć funty",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "tabletka dietetyczna",
+            "score": 1.5,
+            "category": "health"
+        },
+        {
+            "word": "spalacz tłuszczu",
+            "score": 1.5,
+            "category": "health"
+        },
+        {
+            "word": "cudowne lekarstwo",
+            "score": 2,
+            "category": "health"
+        },
+        {
+            "word": "naturalny środek",
+            "score": 0.8,
+            "category": "health"
+        },
+        {
+            "word": "przeciwstarzeniowy",
+            "score": 0.8,
+            "category": "health"
+        },
+        {
+            "word": "treści dla dorosłych",
+            "score": 1.5,
+            "category": "adult"
+        },
+        {
+            "word": "xxx",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "randki dla dorosłych",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "poznaj singli",
+            "score": 1.2,
+            "category": "adult"
+        },
+        {
+            "word": "gorące single",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "samotne kobiety",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "samotna gospodyni domowa",
+            "score": 2.5,
+            "category": "adult"
+        },
+        {
+            "word": "drogi przyjacielu",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "drogi ukochany",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "szanowny panie/szanowna pani",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "poufny",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "ściśle tajne",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "prywatne i poufne",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "nie ignoruj",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "musi odpowiedzieć",
+            "score": 1.2,
+            "category": "urgency"
+        },
+        {
+            "word": "to nie jest spam",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "to nie są śmieci",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "to nie jest oszustwo",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "legalna oferta",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "informacja prawna",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "postanowienie sądu",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "dotacja rządowa",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "bezpłatny grant",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "urząd skarbowy",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "zwrot podatku",
+            "score": 1.5,
+            "category": "scam"
+        }
+    ],
+    "spamSingleWords": {
+        "v1agra": 3,
+        "vi@gra": 3,
+        "c1alis": 3,
+        "p0rn": 3,
+        "pr0n": 3,
+        "s3x": 2,
+        "enlargement": 1.5,
+        "erectile": 1.2,
+        "orgasm": 1.5,
+        "libido": 1.2,
+        "potency": 1.2,
+        "unsubscribe": 0.3,
+        "opt-out": 0.3,
+        "optout": 0.3,
+        "junk": 0.5,
+        "bulk": 0.5,
+        "mass": 0.3,
+        "mlm": 1.5,
+        "roi": 0.5
+    },
+    "spamSubjectPatterns": [
+        {
+            "pattern": "^re:\\s*re:\\s*re:",
+            "score": 1.5,
+            "name": "MULTIPLE_RE"
+        },
+        {
+            "pattern": "^fw:\\s*fw:\\s*fw:",
+            "score": 1.5,
+            "name": "MULTIPLE_FW"
+        },
+        {
+            "pattern": "^re:\\s*$",
+            "score": 2,
+            "name": "EMPTY_RE"
+        },
+        {
+            "pattern": "\\$\\$\\$",
+            "score": 2,
+            "name": "DOLLAR_SIGNS"
+        },
+        {
+            "pattern": "!\\s*!\\s*!",
+            "score": 1.5,
+            "name": "MULTIPLE_EXCLAIM"
+        },
+        {
+            "pattern": "\\?\\s*\\?\\s*\\?",
+            "score": 1,
+            "name": "MULTIPLE_QUESTION"
+        },
+        {
+            "pattern": "[A-Z]{10,}",
+            "score": 1.5,
+            "name": "LONG_CAPS"
+        },
+        {
+            "pattern": "free\\s+(gift|money|cash|prize)",
+            "score": 2,
+            "name": "FREE_STUFF"
+        },
+        {
+            "pattern": "you('ve|'re|\\s+have|\\s+are)\\s+(been\\s+)?selected",
+            "score": 2,
+            "name": "YOU_SELECTED"
+        },
+        {
+            "pattern": "winner",
+            "score": 1.2,
+            "name": "WINNER"
+        },
+        {
+            "pattern": "urgent",
+            "score": 1,
+            "name": "URGENT"
+        },
+        {
+            "pattern": "important\\s+(notice|message|information)",
+            "score": 1.2,
+            "name": "IMPORTANT_NOTICE"
+        },
+        {
+            "pattern": "account\\s+(suspended|closed|locked)",
+            "score": 1.8,
+            "name": "ACCOUNT_SUSPENDED"
+        },
+        {
+            "pattern": "verify\\s+(your|account)",
+            "score": 1.5,
+            "name": "VERIFY_ACCOUNT"
+        },
+        {
+            "pattern": "\\d{1,3}%\\s*off",
+            "score": 0.8,
+            "name": "PERCENT_OFF"
+        },
+        {
+            "pattern": "limited\\s+time",
+            "score": 1,
+            "name": "LIMITED_TIME"
+        },
+        {
+            "pattern": "act\\s+now",
+            "score": 1.5,
+            "name": "ACT_NOW"
+        },
+        {
+            "pattern": "call\\s+now",
+            "score": 1,
+            "name": "CALL_NOW"
+        },
+        {
+            "pattern": "\\bATTN\\b",
+            "score": 1,
+            "name": "ATTN"
+        },
+        {
+            "pattern": "dear\\s+(customer|user|member|valued)",
+            "score": 1,
+            "name": "DEAR_GENERIC"
+        }
+    ],
+    "hamWords": {
+        "spotkanie": -0.3,
+        "harmonogram": -0.3,
+        "projekt": -0.3,
+        "termin ostateczny": -0.3,
+        "przyłączony": -0.3,
+        "załącznik": -0.3,
+        "pozdrowienia": -0.2,
+        "z poważaniem": -0.2,
+        "dzięki": -0.2,
+        "dziękuję": -0.3,
+        "kontynuacja": -0.3,
+        "jak omówiono": -0.5,
+        "zgodnie z naszą rozmową": -0.5,
+        "faktura": -0.2,
+        "raport": -0.2,
+        "streszczenie": -0.2,
+        "protokół": -0.3,
+        "porządek obrad": -0.3,
+        "konferencja": -0.3,
+        "magazyn": -0.5,
+        "żądanie ściągnięcia": -0.8,
+        "popełniać": -0.5,
+        "łączyć": -0.5,
+        "oddział": -0.5,
+        "wdrożyć": -0.5,
+        "dokumentacja": -0.3
+    },
+    "bayesianTokens": {
+        "viagra": {
+            "spam": 0.99,
+            "ham": 0.001
+        },
+        "cialis": {
+            "spam": 0.99,
+            "ham": 0.001
+        },
+        "rozszerzenie": {
+            "spam": 0.98,
+            "ham": 0.002
+        },
+        "nigeryjski": {
+            "spam": 0.97,
+            "ham": 0.01
+        },
+        "dziedzictwo": {
+            "spam": 0.95,
+            "ham": 0.02
+        },
+        "beneficjant": {
+            "spam": 0.92,
+            "ham": 0.03
+        },
+        "loteria": {
+            "spam": 0.96,
+            "ham": 0.01
+        },
+        "zwycięzca": {
+            "spam": 0.88,
+            "ham": 0.08
+        },
+        "pula": {
+            "spam": 0.95,
+            "ham": 0.01
+        },
+        "wypisać się": {
+            "spam": 0.75,
+            "ham": 0.15
+        },
+        "zrezygnować": {
+            "spam": 0.8,
+            "ham": 0.08
+        },
+        "trzask": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "bezpłatny": {
+            "spam": 0.72,
+            "ham": 0.3
+        },
+        "pieniądze": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "gotówka": {
+            "spam": 0.75,
+            "ham": 0.15
+        },
+        "nagroda": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "wygrał": {
+            "spam": 0.72,
+            "ham": 0.25
+        },
+        "pilny": {
+            "spam": 0.78,
+            "ham": 0.12
+        },
+        "natychmiast": {
+            "spam": 0.7,
+            "ham": 0.2
+        },
+        "działać": {
+            "spam": 0.55,
+            "ham": 0.35
+        },
+        "ograniczony": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "oferta": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "rabat": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "gwarantowane": {
+            "spam": 0.78,
+            "ham": 0.15
+        },
+        "bez ryzyka": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "obowiązek": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "kredyt": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "dług": {
+            "spam": 0.7,
+            "ham": 0.2
+        },
+        "pożyczka": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "hipoteka": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "apteka": {
+            "spam": 0.9,
+            "ham": 0.03
+        },
+        "recepta": {
+            "spam": 0.82,
+            "ham": 0.12
+        },
+        "lek": {
+            "spam": 0.78,
+            "ham": 0.15
+        },
+        "pigułki": {
+            "spam": 0.85,
+            "ham": 0.08
+        },
+        "waga": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "dieta": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "stracić": {
+            "spam": 0.55,
+            "ham": 0.38
+        },
+        "funtów": {
+            "spam": 0.6,
+            "ham": 0.32
+        },
+        "kupić": {
+            "spam": 0.58,
+            "ham": 0.38
+        },
+        "zamówienie": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "zakup": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "sprzedaż": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "tani": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "ratować": {
+            "spam": 0.58,
+            "ham": 0.38
+        },
+        "umowa": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "specjalny": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "ekskluzywny": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "premia": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "prezent": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "gratulacje": {
+            "spam": 0.82,
+            "ham": 0.12
+        },
+        "wybrany": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "potwierdzać": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "zweryfikować": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "konto": {
+            "spam": 0.48,
+            "ham": 0.48
+        },
+        "hasło": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "zawieszony": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "zamknięty": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "bezpieczeństwo": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "aktualizacja": {
+            "spam": 0.45,
+            "ham": 0.48
+        },
+        "paypal": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "ebay": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "amazonka": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "bank": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "drut": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "przenosić ": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "rozgromienie": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "szybki": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "western": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "unia": {
+            "spam": 0.5,
+            "ham": 0.45
+        },
+        "moneygram": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "bitcoin": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "kryptowaluta": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "portfel": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "blockchain": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "spotkanie": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "harmonogram": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "projekt": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "zespół": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "termin ostateczny": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "przyłączony": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "załącznik": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "dokument": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "raport": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "recenzja": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "informacja zwrotna": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "dyskusja": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "porządek obrad": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "protokół": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "konferencja": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "dzwonić": {
+            "spam": 0.35,
+            "ham": 0.58
+        },
+        "pozdrowienia": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "z poważaniem": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "dzięki": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "dziękować": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "doceniać": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "następny": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "omówione": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "rozmowa": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "faktura": {
+            "spam": 0.28,
+            "ham": 0.65
+        },
+        "paragon": {
+            "spam": 0.3,
+            "ham": 0.62
+        },
+        "streszczenie": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "analiza": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "badania": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "dane": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "wyniki": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "magazyn": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "popełniać": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "łączyć": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "oddział": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "ciągnąć": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "wniosek": {
+            "spam": 0.35,
+            "ham": 0.58
+        },
+        "wdrożyć": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "zbudować": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "test": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "odpluskwić": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "błąd": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "naprawić": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "wydanie": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "funkcja": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "uwolnienie": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "wersja": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "dokumentacja": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "api": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "serwer": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "baza danych": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "zapytanie": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "funkcjonować": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "zmienny": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "klasa": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "metoda": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "interfejs": {
+            "spam": 0.12,
+            "ham": 0.82
+        }
+    },
+    "urgencyWords": [
+        "pilny",
+        "natychmiastowy",
+        "natychmiast",
+        "jak najszybciej",
+        "działaj teraz",
+        "nie zwlekaj",
+        "spieszyć się",
+        "ograniczony czas",
+        "wygasa",
+        "termin ostateczny",
+        "ostatnia szansa",
+        "ostateczne zawiadomienie",
+        "wrażliwy na czas",
+        "odpowiedz teraz",
+        "wymagane działanie"
+    ],
+    "greetingWords": [
+        "cześć",
+        "witam",
+        "drogi",
+        "hej",
+        "pozdrowienia",
+        "dzień dobry",
+        "dzień dobry",
+        "dobry wieczór"
+    ],
+    "genericGreetings": [
+        "szanowny panie",
+        "szanowna pani",
+        "szanowny kliencie",
+        "drogi użytkowniku",
+        "drogi członku",
+        "drogi przyjacielu",
+        "drogi, ceniony",
+        "drogi adresacie",
+        "drogi beneficjencie"
+    ]
+}

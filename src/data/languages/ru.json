@@ -1,0 +1,1377 @@
+{
+    "language": "ru",
+    "languageName": "Russian",
+    "spamWords": [
+        {
+            "word": "нигерийский принц",
+            "score": 3.5,
+            "category": "scam"
+        },
+        {
+            "word": "телеграфный перевод",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "банковские реквизиты",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "наследственный фонд",
+            "score": 3,
+            "category": "scam"
+        },
+        {
+            "word": "невостребованные средства",
+            "score": 3,
+            "category": "scam"
+        },
+        {
+            "word": "бенефициар",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "миллион долларов",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "миллион долларов сша",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "комиссия за перевод",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "комиссия за обработку",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "предоплата",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "western union",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "moneygram",
+            "score": 1.5,
+            "category": "finance"
+        },
+        {
+            "word": "биткоин-кошелек",
+            "score": 1,
+            "category": "crypto"
+        },
+        {
+            "word": "инвестиции в криптовалюту",
+            "score": 1.5,
+            "category": "crypto"
+        },
+        {
+            "word": "удвойте свои биткоины",
+            "score": 3,
+            "category": "crypto"
+        },
+        {
+            "word": "криптовалютный розыгрыш",
+            "score": 2.5,
+            "category": "crypto"
+        },
+        {
+            "word": "действуйте сейчас!",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "действовать немедленно",
+            "score": 1.8,
+            "category": "urgency"
+        },
+        {
+            "word": "срочный ответ",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "срочное внимание",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "немедленные действия",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "ограниченное время",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "истекает сегодня",
+            "score": 1.2,
+            "category": "urgency"
+        },
+        {
+            "word": "последний шанс",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "окончательное уведомление",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "немедленно отреагируйте",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "в течение 24 часов",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "в течение 48 часов",
+            "score": 0.8,
+            "category": "urgency"
+        },
+        {
+            "word": "срочно",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "не откладывайте",
+            "score": 1,
+            "category": "urgency"
+        },
+        {
+            "word": "поздравляем победителя!",
+            "score": 2.5,
+            "category": "lottery"
+        },
+        {
+            "word": "вы победили",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "победитель лотереи",
+            "score": 2.5,
+            "category": "lottery"
+        },
+        {
+            "word": "уведомление о призе",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "заберите свой приз",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "уведомление о выигрыше",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "счастливый победитель",
+            "score": 2,
+            "category": "lottery"
+        },
+        {
+            "word": "выбранный победитель",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "денежный приз",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "бесплатный приз",
+            "score": 1.5,
+            "category": "lottery"
+        },
+        {
+            "word": "лотереи",
+            "score": 1,
+            "category": "lottery"
+        },
+        {
+            "word": "подтвердить свою учетную запись",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "подтвердить свою личность",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "обновите свой платеж",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "заблокированный аккаунт",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "учетная запись заблокирована",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "необычная активность",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "подозрительная активность",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "несанкционированный доступ",
+            "score": 1.2,
+            "category": "phishing"
+        },
+        {
+            "word": "нажмите здесь для подтверждения",
+            "score": 2,
+            "category": "phishing"
+        },
+        {
+            "word": "учетные данные для входа",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "сброс пароля",
+            "score": 0.8,
+            "category": "phishing"
+        },
+        {
+            "word": "предупреждение о безопасности",
+            "score": 1,
+            "category": "phishing"
+        },
+        {
+            "word": "ваш аккаунт будет",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "неспособность проверить",
+            "score": 1.8,
+            "category": "phishing"
+        },
+        {
+            "word": "активируйте свой",
+            "score": 1.5,
+            "category": "phishing"
+        },
+        {
+            "word": "отписаться",
+            "score": 0.1,
+            "category": "marketing"
+        },
+        {
+            "word": "кликните сюда",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "купить сейчас",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "заказать сейчас",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "бесплатное предложение",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "специальное предложение",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "эксклюзивное предложение",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "без риска",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "без обязательств",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "гарантия возврата денег",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "гарантия удовлетворения",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "позвоните сейчас",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "бесплатный звонок",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "100% бесплатно",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "совершенно бесплатно",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "бесплатно",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "без комиссий",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "самая низкая цена",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "лучшая цена",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "скидка",
+            "score": 0.3,
+            "category": "marketing"
+        },
+        {
+            "word": "сэкономьте по-крупному",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "экономьте деньги",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "удвойте свой",
+            "score": 1.5,
+            "category": "marketing"
+        },
+        {
+            "word": "увеличить свой",
+            "score": 0.5,
+            "category": "marketing"
+        },
+        {
+            "word": "зарабатывать деньги",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "зарабатывать деньги",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "дополнительный доход",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "работа из дома",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "будь сам себе начальником",
+            "score": 1.2,
+            "category": "marketing"
+        },
+        {
+            "word": "финансовая свобода",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "разбогатеть",
+            "score": 1.5,
+            "category": "marketing"
+        },
+        {
+            "word": "получать деньги",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "мгновенный доступ",
+            "score": 0.8,
+            "category": "marketing"
+        },
+        {
+            "word": "присоединяйтесь к миллионам",
+            "score": 1,
+            "category": "marketing"
+        },
+        {
+            "word": "виагра",
+            "score": 2.5,
+            "category": "drugs"
+        },
+        {
+            "word": "сиалис",
+            "score": 2.5,
+            "category": "drugs"
+        },
+        {
+            "word": "аптека",
+            "score": 0.8,
+            "category": "drugs"
+        },
+        {
+            "word": "онлайн-аптека",
+            "score": 1.5,
+            "category": "drugs"
+        },
+        {
+            "word": "канадская аптека",
+            "score": 1.8,
+            "category": "drugs"
+        },
+        {
+            "word": "рецепт",
+            "score": 0.5,
+            "category": "drugs"
+        },
+        {
+            "word": "без рецепта",
+            "score": 2,
+            "category": "drugs"
+        },
+        {
+            "word": "без рецепта",
+            "score": 2,
+            "category": "drugs"
+        },
+        {
+            "word": "эректильная дисфункция",
+            "score": 1.5,
+            "category": "drugs"
+        },
+        {
+            "word": "снижение веса",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "худеть",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "сбросить лишние килограммы",
+            "score": 1,
+            "category": "health"
+        },
+        {
+            "word": "таблетки для похудения",
+            "score": 1.5,
+            "category": "health"
+        },
+        {
+            "word": "жиросжигатель",
+            "score": 1.5,
+            "category": "health"
+        },
+        {
+            "word": "чудодейственное исцеление",
+            "score": 2,
+            "category": "health"
+        },
+        {
+            "word": "натуральное средство",
+            "score": 0.8,
+            "category": "health"
+        },
+        {
+            "word": "омоложение",
+            "score": 0.8,
+            "category": "health"
+        },
+        {
+            "word": "контент для взрослых",
+            "score": 1.5,
+            "category": "adult"
+        },
+        {
+            "word": "xxx",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "знакомства для взрослых",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "знакомьтесь с одинокими людьми",
+            "score": 1.2,
+            "category": "adult"
+        },
+        {
+            "word": "горячие одиночки",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "одинокие женщины",
+            "score": 2,
+            "category": "adult"
+        },
+        {
+            "word": "одинокая домохозяйка",
+            "score": 2.5,
+            "category": "adult"
+        },
+        {
+            "word": "дорогой друг",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "дорогой любимый",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "уважаемый господин/госпожа",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "конфиденциально",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "строго конфиденциально",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "частная и конфиденциальная информация",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "не игнорируйте",
+            "score": 1.5,
+            "category": "urgency"
+        },
+        {
+            "word": "должен ответить",
+            "score": 1.2,
+            "category": "urgency"
+        },
+        {
+            "word": "это не спам",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "это не хлам",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "не мошенничество",
+            "score": 2.5,
+            "category": "scam"
+        },
+        {
+            "word": "законное предложение",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "юридическое уведомление",
+            "score": 1,
+            "category": "scam"
+        },
+        {
+            "word": "постановление суда",
+            "score": 1.5,
+            "category": "scam"
+        },
+        {
+            "word": "государственная субсидия",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "бесплатный грант",
+            "score": 2,
+            "category": "scam"
+        },
+        {
+            "word": "ирс",
+            "score": 0.8,
+            "category": "scam"
+        },
+        {
+            "word": "возврат налога",
+            "score": 1.5,
+            "category": "scam"
+        }
+    ],
+    "spamSingleWords": {
+        "v1agra": 3,
+        "vi@gra": 3,
+        "c1alis": 3,
+        "p0rn": 3,
+        "pr0n": 3,
+        "s3x": 2,
+        "enlargement": 1.5,
+        "erectile": 1.2,
+        "orgasm": 1.5,
+        "libido": 1.2,
+        "potency": 1.2,
+        "unsubscribe": 0.3,
+        "opt-out": 0.3,
+        "optout": 0.3,
+        "junk": 0.5,
+        "bulk": 0.5,
+        "mass": 0.3,
+        "mlm": 1.5,
+        "roi": 0.5
+    },
+    "spamSubjectPatterns": [
+        {
+            "pattern": "^re:\\s*re:\\s*re:",
+            "score": 1.5,
+            "name": "MULTIPLE_RE"
+        },
+        {
+            "pattern": "^fw:\\s*fw:\\s*fw:",
+            "score": 1.5,
+            "name": "MULTIPLE_FW"
+        },
+        {
+            "pattern": "^re:\\s*$",
+            "score": 2,
+            "name": "EMPTY_RE"
+        },
+        {
+            "pattern": "\\$\\$\\$",
+            "score": 2,
+            "name": "DOLLAR_SIGNS"
+        },
+        {
+            "pattern": "!\\s*!\\s*!",
+            "score": 1.5,
+            "name": "MULTIPLE_EXCLAIM"
+        },
+        {
+            "pattern": "\\?\\s*\\?\\s*\\?",
+            "score": 1,
+            "name": "MULTIPLE_QUESTION"
+        },
+        {
+            "pattern": "[A-Z]{10,}",
+            "score": 1.5,
+            "name": "LONG_CAPS"
+        },
+        {
+            "pattern": "free\\s+(gift|money|cash|prize)",
+            "score": 2,
+            "name": "FREE_STUFF"
+        },
+        {
+            "pattern": "you('ve|'re|\\s+have|\\s+are)\\s+(been\\s+)?selected",
+            "score": 2,
+            "name": "YOU_SELECTED"
+        },
+        {
+            "pattern": "winner",
+            "score": 1.2,
+            "name": "WINNER"
+        },
+        {
+            "pattern": "urgent",
+            "score": 1,
+            "name": "URGENT"
+        },
+        {
+            "pattern": "important\\s+(notice|message|information)",
+            "score": 1.2,
+            "name": "IMPORTANT_NOTICE"
+        },
+        {
+            "pattern": "account\\s+(suspended|closed|locked)",
+            "score": 1.8,
+            "name": "ACCOUNT_SUSPENDED"
+        },
+        {
+            "pattern": "verify\\s+(your|account)",
+            "score": 1.5,
+            "name": "VERIFY_ACCOUNT"
+        },
+        {
+            "pattern": "\\d{1,3}%\\s*off",
+            "score": 0.8,
+            "name": "PERCENT_OFF"
+        },
+        {
+            "pattern": "limited\\s+time",
+            "score": 1,
+            "name": "LIMITED_TIME"
+        },
+        {
+            "pattern": "act\\s+now",
+            "score": 1.5,
+            "name": "ACT_NOW"
+        },
+        {
+            "pattern": "call\\s+now",
+            "score": 1,
+            "name": "CALL_NOW"
+        },
+        {
+            "pattern": "\\bATTN\\b",
+            "score": 1,
+            "name": "ATTN"
+        },
+        {
+            "pattern": "dear\\s+(customer|user|member|valued)",
+            "score": 1,
+            "name": "DEAR_GENERIC"
+        }
+    ],
+    "hamWords": {
+        "встреча": -0.3,
+        "расписание": -0.3,
+        "проект": -0.3,
+        "крайний срок": -0.3,
+        "прикрепил": -0.3,
+        "вложение": -0.3,
+        "с уважением": -0.2,
+        "искренне": -0.2,
+        "спасибо": -0.3,
+        "продолжение": -0.3,
+        "как обсуждалось": -0.5,
+        "согласно нашему разговору": -0.5,
+        "счет": -0.2,
+        "отчет": -0.2,
+        "краткое содержание": -0.2,
+        "минут": -0.3,
+        "повестка дня": -0.3,
+        "конференция": -0.3,
+        "репозиторий": -0.5,
+        "запрос на слияние": -0.8,
+        "совершить": -0.5,
+        "слияние": -0.5,
+        "ветвь": -0.5,
+        "развертывать": -0.5,
+        "документация": -0.3
+    },
+    "bayesianTokens": {
+        "виагра": {
+            "spam": 0.99,
+            "ham": 0.001
+        },
+        "сиалис": {
+            "spam": 0.99,
+            "ham": 0.001
+        },
+        "увеличение": {
+            "spam": 0.98,
+            "ham": 0.002
+        },
+        "нигерийский": {
+            "spam": 0.97,
+            "ham": 0.01
+        },
+        "наследование": {
+            "spam": 0.95,
+            "ham": 0.02
+        },
+        "бенефициар": {
+            "spam": 0.92,
+            "ham": 0.03
+        },
+        "лотерея": {
+            "spam": 0.96,
+            "ham": 0.01
+        },
+        "победитель": {
+            "spam": 0.88,
+            "ham": 0.08
+        },
+        "джекпот": {
+            "spam": 0.95,
+            "ham": 0.01
+        },
+        "отписаться": {
+            "spam": 0.75,
+            "ham": 0.15
+        },
+        "уклоняться": {
+            "spam": 0.8,
+            "ham": 0.08
+        },
+        "клик": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "бесплатно": {
+            "spam": 0.72,
+            "ham": 0.3
+        },
+        "деньги": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "наличные": {
+            "spam": 0.75,
+            "ham": 0.15
+        },
+        "приз": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "выиграл": {
+            "spam": 0.72,
+            "ham": 0.25
+        },
+        "срочный": {
+            "spam": 0.78,
+            "ham": 0.12
+        },
+        "немедленно": {
+            "spam": 0.7,
+            "ham": 0.2
+        },
+        "действовать": {
+            "spam": 0.55,
+            "ham": 0.35
+        },
+        "ограниченный": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "предложение": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "скидка": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "гарантировано": {
+            "spam": 0.78,
+            "ham": 0.15
+        },
+        "без риска": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "обязательство": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "кредит": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "долг": {
+            "spam": 0.7,
+            "ham": 0.2
+        },
+        "заем": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "ипотека": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "аптека": {
+            "spam": 0.9,
+            "ham": 0.03
+        },
+        "рецепт": {
+            "spam": 0.82,
+            "ham": 0.12
+        },
+        "медикамент": {
+            "spam": 0.78,
+            "ham": 0.15
+        },
+        "таблетки": {
+            "spam": 0.85,
+            "ham": 0.08
+        },
+        "масса": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "диета": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "терять": {
+            "spam": 0.55,
+            "ham": 0.38
+        },
+        "фунты": {
+            "spam": 0.6,
+            "ham": 0.32
+        },
+        "купить": {
+            "spam": 0.58,
+            "ham": 0.38
+        },
+        "заказ": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "покупка": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "распродажа": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "дешевый": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "сохранять": {
+            "spam": 0.58,
+            "ham": 0.38
+        },
+        "иметь дело": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "особенный": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "эксклюзивный": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "бонус": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "подарок": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "поздравляем!": {
+            "spam": 0.82,
+            "ham": 0.12
+        },
+        "выбранный": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "подтверждать": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "проверять": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "счет": {
+            "spam": 0.28,
+            "ham": 0.65
+        },
+        "пароль": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "приостановленный": {
+            "spam": 0.75,
+            "ham": 0.18
+        },
+        "заблокировано": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "безопасность": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "обновлять": {
+            "spam": 0.45,
+            "ham": 0.48
+        },
+        "paypal": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "ebay": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "амазон": {
+            "spam": 0.55,
+            "ham": 0.4
+        },
+        "банк": {
+            "spam": 0.52,
+            "ham": 0.42
+        },
+        "проволока": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "передача": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "маршрутизация": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "быстрый": {
+            "spam": 0.65,
+            "ham": 0.3
+        },
+        "западный": {
+            "spam": 0.68,
+            "ham": 0.28
+        },
+        "профсоюз": {
+            "spam": 0.5,
+            "ham": 0.45
+        },
+        "moneygram": {
+            "spam": 0.88,
+            "ham": 0.05
+        },
+        "биткоин": {
+            "spam": 0.72,
+            "ham": 0.22
+        },
+        "криптовалюта": {
+            "spam": 0.7,
+            "ham": 0.25
+        },
+        "кошелек": {
+            "spam": 0.62,
+            "ham": 0.32
+        },
+        "блокчейн": {
+            "spam": 0.6,
+            "ham": 0.35
+        },
+        "встреча": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "расписание": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "проект": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "команда": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "крайний срок": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "прикрепил": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "вложение": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "документ": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "отчет": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "обзор": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "обратная связь": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "обсуждение": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "повестка дня": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "минут": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "конференция": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "вызов": {
+            "spam": 0.35,
+            "ham": 0.58
+        },
+        "с уважением": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "искренне": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "спасибо": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "благодарить": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "ценить": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "следующий": {
+            "spam": 0.25,
+            "ham": 0.68
+        },
+        "обсуждалось": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "беседа": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "квитанция": {
+            "spam": 0.3,
+            "ham": 0.62
+        },
+        "краткое содержание": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "анализ": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "исследовать": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "данные": {
+            "spam": 0.2,
+            "ham": 0.72
+        },
+        "результаты": {
+            "spam": 0.22,
+            "ham": 0.7
+        },
+        "репозиторий": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "совершить": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "слияние": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "ветвь": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "тянуть": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "запрос": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "развертывать": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "строить": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "тест": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "отлаживать": {
+            "spam": 0.05,
+            "ham": 0.92
+        },
+        "ошибка": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "исправить": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "проблема": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "особенность": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "выпускать": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "версия": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "документация": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "api": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "сервер": {
+            "spam": 0.18,
+            "ham": 0.75
+        },
+        "база данных": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "функция": {
+            "spam": 0.1,
+            "ham": 0.85
+        },
+        "переменная": {
+            "spam": 0.08,
+            "ham": 0.88
+        },
+        "сорт": {
+            "spam": 0.12,
+            "ham": 0.82
+        },
+        "метод": {
+            "spam": 0.15,
+            "ham": 0.78
+        },
+        "интерфейс": {
+            "spam": 0.12,
+            "ham": 0.82
+        }
+    },
+    "urgencyWords": [
+        "срочный",
+        "немедленный",
+        "немедленно",
+        "как можно скорее",
+        "действуйте сейчас!",
+        "не откладывайте",
+        "торопиться",
+        "ограниченное время",
+        "истекает",
+        "крайний срок",
+        "последний шанс",
+        "окончательное уведомление",
+        "срочно",
+        "ответить сейчас",
+        "необходимые действия"
+    ],
+    "greetingWords": [
+        "привет",
+        "привет",
+        "дорогой",
+        "привет",
+        "привет",
+        "доброе утро",
+        "добрый день",
+        "добрый вечер"
+    ],
+    "genericGreetings": [
+        "уважаемый господин",
+        "уважаемая госпожа!",
+        "уважаемый клиент",
+        "уважаемый пользователь!",
+        "уважаемый участник!",
+        "дорогой друг",
+        "дорогой, ценный",
+        "уважаемый получатель!",
+        "уважаемый получатель!"
+    ]
+}
